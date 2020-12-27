@@ -1,0 +1,6 @@
+framework module Pods_podmarkshare {
+  umbrella header "Pods-podmarkshare-umbrella.h"
+
+  export *
+  module * { export * }
+}
