@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8615BFFDEE8AE9EB0BDFB37D /* Pods_podmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3917FD1E7A0C08DCACA78EA2 /* Pods_podmark.framework */; };
-		A35898CDE71333D2FE89ACC9 /* Pods_podmarkshare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95531B7330631B8EDE45E5C8 /* Pods_podmarkshare.framework */; };
+		1798718913BDD217190FA2F7 /* Pods_podmarkshare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9B39E522524E80FB3381D4 /* Pods_podmarkshare.framework */; };
+		3DFB78CEF4EF26BAF0CEC574 /* Pods_add.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E9C3059C019871DECB9246 /* Pods_add.framework */; };
+		56AEA06AF15C7C47824DBAEF /* Pods_podmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4B211FE4CA80DDA25D5AE4 /* Pods_podmark.framework */; };
 		C707A61725939643000FEFC3 /* SwipeToDeleteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C707A61625939643000FEFC3 /* SwipeToDeleteRow.swift */; };
 		C70BBE0A256ABD0E004AC950 /* SavedListItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BBE09256ABD0E004AC950 /* SavedListItemPresenter.swift */; };
 		C70BBE2E256ACE90004AC950 /* SavedListItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70BBE09256ABD0E004AC950 /* SavedListItemPresenter.swift */; };
@@ -64,8 +65,6 @@
 		C7EE384725616F36009831AD /* TextAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE384625616F36009831AD /* TextAlert.swift */; };
 		C7F89E1E256047D00007FFD2 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F89E1D256047D00007FFD2 /* StringExtensions.swift */; };
 		C7F89E23256047FB0007FFD2 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F89E1D256047D00007FFD2 /* StringExtensions.swift */; };
-		DD46E80E42B1B37B6FDDE07C /* Pods_add.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904ECC018164DC8223409BAA /* Pods_add.framework */; };
-		DEA8033F76E963AB3633ABA3 /* Pods_podmarkshare2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B548B52F9642F022C34291A7 /* Pods_podmarkshare2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,22 +100,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		15A69448989A0D2C62370DE6 /* Pods_podmarkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_podmarkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCF729B25CA1305B51C08EC /* Pods-add.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-add.release.xcconfig"; path = "Target Support Files/Pods-add/Pods-add.release.xcconfig"; sourceTree = "<group>"; };
+		2A9B39E522524E80FB3381D4 /* Pods_podmarkshare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_podmarkshare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ABF18EE66FF91B6087897B5 /* Pods-podmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podmark.debug.xcconfig"; path = "Target Support Files/Pods-podmark/Pods-podmark.debug.xcconfig"; sourceTree = "<group>"; };
-		3917FD1E7A0C08DCACA78EA2 /* Pods_podmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_podmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		56D7C300E7385F9287282E91 /* Pods_podmarkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_podmarkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5C66DAD6B9299FBA07F81C /* Pods-podmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podmark.release.xcconfig"; path = "Target Support Files/Pods-podmark/Pods-podmark.release.xcconfig"; sourceTree = "<group>"; };
 		5D5E6BE02D8B60E191DF0CF3 /* Pods-podmarkshare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podmarkshare.release.xcconfig"; path = "Target Support Files/Pods-podmarkshare/Pods-podmarkshare.release.xcconfig"; sourceTree = "<group>"; };
-		649427C7FA8203745010FBFA /* Pods-podmarkshare2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podmarkshare2.debug.xcconfig"; path = "Target Support Files/Pods-podmarkshare2/Pods-podmarkshare2.debug.xcconfig"; sourceTree = "<group>"; };
-		839EE1DDDDC5F00068872FDD /* Pods-podmarkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podmarkTests.debug.xcconfig"; path = "Target Support Files/Pods-podmarkTests/Pods-podmarkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		71E9C3059C019871DECB9246 /* Pods_add.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_add.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4E33DA2BD55271E653C756 /* Pods-add.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-add.debug.xcconfig"; path = "Target Support Files/Pods-add/Pods-add.debug.xcconfig"; sourceTree = "<group>"; };
-		904ECC018164DC8223409BAA /* Pods_add.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_add.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		95531B7330631B8EDE45E5C8 /* Pods_podmarkshare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_podmarkshare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B4B211FE4CA80DDA25D5AE4 /* Pods_podmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_podmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BC9410A840750D4F6DB2A6 /* Pods-podmarkshare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podmarkshare.debug.xcconfig"; path = "Target Support Files/Pods-podmarkshare/Pods-podmarkshare.debug.xcconfig"; sourceTree = "<group>"; };
-		B548B52F9642F022C34291A7 /* Pods_podmarkshare2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_podmarkshare2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6DE4FD4046510A6C1E3F56E /* Pods-podmarkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podmarkUITests.debug.xcconfig"; path = "Target Support Files/Pods-podmarkUITests/Pods-podmarkUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C0659E89D608B0A7D2D0262B /* Pods-podmarkshare2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podmarkshare2.release.xcconfig"; path = "Target Support Files/Pods-podmarkshare2/Pods-podmarkshare2.release.xcconfig"; sourceTree = "<group>"; };
 		C707A61625939643000FEFC3 /* SwipeToDeleteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToDeleteRow.swift; sourceTree = "<group>"; };
 		C70BBE09256ABD0E004AC950 /* SavedListItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListItemPresenter.swift; sourceTree = "<group>"; };
 		C70BBE49256ACF4B004AC950 /* SavedListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListItemView.swift; sourceTree = "<group>"; };
@@ -158,8 +150,6 @@
 		C7E5B51F254DCB7000B5D31F /* SavedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListView.swift; sourceTree = "<group>"; };
 		C7EE384625616F36009831AD /* TextAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlert.swift; sourceTree = "<group>"; };
 		C7F89E1D256047D00007FFD2 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		DC15DD8846A6E7FC60FC7943 /* Pods-podmarkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podmarkUITests.release.xcconfig"; path = "Target Support Files/Pods-podmarkUITests/Pods-podmarkUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E7CF29E68449ED6C84A0C465 /* Pods-podmarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podmarkTests.release.xcconfig"; path = "Target Support Files/Pods-podmarkTests/Pods-podmarkTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,8 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7A336BF25866B2700F8CE4E /* Intents.framework in Frameworks */,
-				8615BFFDEE8AE9EB0BDFB37D /* Pods_podmark.framework in Frameworks */,
 				C7A336C125866B3200F8CE4E /* IntentsUI.framework in Frameworks */,
+				56AEA06AF15C7C47824DBAEF /* Pods_podmark.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEA8033F76E963AB3633ABA3 /* Pods_podmarkshare2.framework in Frameworks */,
-				A35898CDE71333D2FE89ACC9 /* Pods_podmarkshare.framework in Frameworks */,
+				1798718913BDD217190FA2F7 /* Pods_podmarkshare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD46E80E42B1B37B6FDDE07C /* Pods_add.framework in Frameworks */,
+				3DFB78CEF4EF26BAF0CEC574 /* Pods_add.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,12 +187,9 @@
 			children = (
 				C7A336C025866B3200F8CE4E /* IntentsUI.framework */,
 				C7A336BE25866B2700F8CE4E /* Intents.framework */,
-				3917FD1E7A0C08DCACA78EA2 /* Pods_podmark.framework */,
-				56D7C300E7385F9287282E91 /* Pods_podmarkTests.framework */,
-				15A69448989A0D2C62370DE6 /* Pods_podmarkUITests.framework */,
-				B548B52F9642F022C34291A7 /* Pods_podmarkshare2.framework */,
-				904ECC018164DC8223409BAA /* Pods_add.framework */,
-				95531B7330631B8EDE45E5C8 /* Pods_podmarkshare.framework */,
+				71E9C3059C019871DECB9246 /* Pods_add.framework */,
+				9B4B211FE4CA80DDA25D5AE4 /* Pods_podmark.framework */,
+				2A9B39E522524E80FB3381D4 /* Pods_podmarkshare.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -213,12 +199,6 @@
 			children = (
 				2ABF18EE66FF91B6087897B5 /* Pods-podmark.debug.xcconfig */,
 				5C5C66DAD6B9299FBA07F81C /* Pods-podmark.release.xcconfig */,
-				839EE1DDDDC5F00068872FDD /* Pods-podmarkTests.debug.xcconfig */,
-				E7CF29E68449ED6C84A0C465 /* Pods-podmarkTests.release.xcconfig */,
-				B6DE4FD4046510A6C1E3F56E /* Pods-podmarkUITests.debug.xcconfig */,
-				DC15DD8846A6E7FC60FC7943 /* Pods-podmarkUITests.release.xcconfig */,
-				649427C7FA8203745010FBFA /* Pods-podmarkshare2.debug.xcconfig */,
-				C0659E89D608B0A7D2D0262B /* Pods-podmarkshare2.release.xcconfig */,
 				8A4E33DA2BD55271E653C756 /* Pods-add.debug.xcconfig */,
 				1DCF729B25CA1305B51C08EC /* Pods-add.release.xcconfig */,
 				A7BC9410A840750D4F6DB2A6 /* Pods-podmarkshare.debug.xcconfig */,
