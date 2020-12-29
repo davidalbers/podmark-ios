@@ -24,7 +24,7 @@ class SavedListsDB {
     
     init() {
         let fileManager = FileManager.default
-        let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.podmark")
+        let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.davidalbers.podmark")
         let path = directory!.appendingPathComponent("db.sqlite3").path
         
         savedItems = Table("saved")
