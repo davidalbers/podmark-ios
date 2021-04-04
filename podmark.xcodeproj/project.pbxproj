@@ -33,6 +33,9 @@
 		C75A3733254DD95D00C27F9F /* SavedListsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75A3732254DD95D00C27F9F /* SavedListsDB.swift */; };
 		C75A3738254E10E900C27F9F /* SavedListsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75A3732254DD95D00C27F9F /* SavedListsDB.swift */; };
 		C75A373E254E1BB700C27F9F /* ShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75A373D254E1BB700C27F9F /* ShareViewModel.swift */; };
+		C7844C072619F6B70079F3BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7844C062619F6B70079F3BA /* Main.storyboard */; };
+		C7844C0C2619F6E30079F3BA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7844C0B2619F6E30079F3BA /* MainViewController.swift */; };
+		C7844C11261A004F0079F3BA /* FolderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7844C10261A004F0079F3BA /* FolderCellView.swift */; };
 		C798FE7F2586636E000AB3F4 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C798FE7E2586636E000AB3F4 /* Intents.intentdefinition */; };
 		C79FFB39258FA508009F6E49 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FFB38258FA508009F6E49 /* ViewExtensions.swift */; };
 		C79FFB3F258FA91E009F6E49 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FFB38258FA508009F6E49 /* ViewExtensions.swift */; };
@@ -131,6 +134,9 @@
 		C75A3732254DD95D00C27F9F /* SavedListsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListsDB.swift; sourceTree = "<group>"; };
 		C75A373D254E1BB700C27F9F /* ShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewModel.swift; sourceTree = "<group>"; };
 		C76DC39B259798F600374C9A /* add.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = add.entitlements; sourceTree = "<group>"; };
+		C7844C062619F6B70079F3BA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C7844C0B2619F6E30079F3BA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C7844C10261A004F0079F3BA /* FolderCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCellView.swift; sourceTree = "<group>"; };
 		C798FE7E2586636E000AB3F4 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		C79FFB38258FA508009F6E49 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		C7A336BE25866B2700F8CE4E /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
@@ -235,6 +241,9 @@
 				C7583720247AB71600BD6C25 /* podmark.entitlements */,
 				C798FE7E2586636E000AB3F4 /* Intents.intentdefinition */,
 				C75836D9247A16D300BD6C25 /* Info.plist */,
+				C7844C062619F6B70079F3BA /* Main.storyboard */,
+				C7844C0B2619F6E30079F3BA /* MainViewController.swift */,
+				C7844C10261A004F0079F3BA /* FolderCellView.swift */,
 				C75836CB247A16CF00BD6C25 /* AppDelegate.swift */,
 				C75A3732254DD95D00C27F9F /* SavedListsDB.swift */,
 				C75836CD247A16CF00BD6C25 /* SceneDelegate.swift */,
@@ -418,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7844C072619F6B70079F3BA /* Main.storyboard in Resources */,
 				C75836D8247A16D300BD6C25 /* LaunchScreen.storyboard in Resources */,
 				C75836D5247A16D300BD6C25 /* Assets.xcassets in Resources */,
 			);
@@ -545,6 +555,7 @@
 				C7F89E1E256047D00007FFD2 /* StringExtensions.swift in Sources */,
 				C7CEEDC3257177D300977978 /* ManualAddItemView.swift in Sources */,
 				C7C0F9E22598F3C400492651 /* RoundedURLImage.swift in Sources */,
+				C7844C11261A004F0079F3BA /* FolderCellView.swift in Sources */,
 				C798FE7F2586636E000AB3F4 /* Intents.intentdefinition in Sources */,
 				C7E5B520254DCB7000B5D31F /* SavedListView.swift in Sources */,
 				C7C0FA192598F6E900492651 /* FoldersView.swift in Sources */,
@@ -563,6 +574,7 @@
 				C7CEEDD325717EEA00977978 /* ManualAddItemPresenter.swift in Sources */,
 				C75A3733254DD95D00C27F9F /* SavedListsDB.swift in Sources */,
 				C707A61725939643000FEFC3 /* SwipeToDeleteRow.swift in Sources */,
+				C7844C0C2619F6E30079F3BA /* MainViewController.swift in Sources */,
 				C79FFB39258FA508009F6E49 /* ViewExtensions.swift in Sources */,
 				C75836CE247A16CF00BD6C25 /* SceneDelegate.swift in Sources */,
 			);
