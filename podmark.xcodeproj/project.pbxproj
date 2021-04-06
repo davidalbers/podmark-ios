@@ -52,7 +52,6 @@
 		C7C0F9FD2598F49E00492651 /* SavedItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F9F82598F48E00492651 /* SavedItemRow.swift */; };
 		C7C0FA102598F61A00492651 /* FoldersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0FA0F2598F61A00492651 /* FoldersPresenter.swift */; };
 		C7C0FA142598F67000492651 /* FoldersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0FA0F2598F61A00492651 /* FoldersPresenter.swift */; };
-		C7C0FA192598F6E900492651 /* FoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0FA182598F6E900492651 /* FoldersView.swift */; };
 		C7C0FA2C2598F7A700492651 /* SavedItemDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0FA2B2598F7A700492651 /* SavedItemDetailsScreen.swift */; };
 		C7C8D7C6256012DC00314A33 /* SavedListsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C8D7C5256012DC00314A33 /* SavedListsPresenter.swift */; };
 		C7CEEDC3257177D300977978 /* ManualAddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CEEDC2257177D300977978 /* ManualAddItemView.swift */; };
@@ -147,7 +146,6 @@
 		C7C0F9E12598F3C400492651 /* RoundedURLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedURLImage.swift; sourceTree = "<group>"; };
 		C7C0F9F82598F48E00492651 /* SavedItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemRow.swift; sourceTree = "<group>"; };
 		C7C0FA0F2598F61A00492651 /* FoldersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersPresenter.swift; sourceTree = "<group>"; };
-		C7C0FA182598F6E900492651 /* FoldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersView.swift; sourceTree = "<group>"; };
 		C7C0FA2B2598F7A700492651 /* SavedItemDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemDetailsScreen.swift; sourceTree = "<group>"; };
 		C7C8D7C5256012DC00314A33 /* SavedListsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListsPresenter.swift; sourceTree = "<group>"; };
 		C7CEEDC2257177D300977978 /* ManualAddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAddItemView.swift; sourceTree = "<group>"; };
@@ -302,7 +300,6 @@
 				C707A61625939643000FEFC3 /* SwipeToDeleteRow.swift */,
 				C7C0F9E12598F3C400492651 /* RoundedURLImage.swift */,
 				C7C0F9F82598F48E00492651 /* SavedItemRow.swift */,
-				C7C0FA182598F6E900492651 /* FoldersView.swift */,
 				C7C0FA2B2598F7A700492651 /* SavedItemDetailsScreen.swift */,
 			);
 			path = Views;
@@ -558,7 +555,6 @@
 				C7844C11261A004F0079F3BA /* FolderCellView.swift in Sources */,
 				C798FE7F2586636E000AB3F4 /* Intents.intentdefinition in Sources */,
 				C7E5B520254DCB7000B5D31F /* SavedListView.swift in Sources */,
-				C7C0FA192598F6E900492651 /* FoldersView.swift in Sources */,
 				C70BBE4A256ACF4B004AC950 /* SavedListItemView.swift in Sources */,
 				C7CEEDCD257177EE00977978 /* ShareViewModel.swift in Sources */,
 				C7C0F9F92598F48E00492651 /* SavedItemRow.swift in Sources */,
