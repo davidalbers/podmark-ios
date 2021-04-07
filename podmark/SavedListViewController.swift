@@ -45,9 +45,12 @@ class SavedListViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SavedItem", for: indexPath as IndexPath) as! SavedItemCellView
         
-        cell.title.text = items[indexPath.row].title
-        cell.podcastName.text = items[indexPath.row].podcastName
-        cell.artwork.sd_setImage(with: URL(string: items[indexPath.row].imageURL))
+        let item = items[indexPath.row]
+        cell.title.text = item.title
+        cell.podcastName.text = item.podcastName
+        cell.artwork.isHidden = item.imageURL.isEmpty
+        cell.artwork.sd_setImage(with: URL(string: item.imageURL))
+        
         return cell
     }
     
