@@ -8,6 +8,7 @@ target 'podmark' do
   pod 'SQLite.swift', '~> 0.12.0'
   pod 'Alamofire', '~> 5.2'
   pod 'URLImage'
+  pod 'SDWebImage', '~> 5.0'
 
 end
 

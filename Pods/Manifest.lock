@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.3.0)
+  - SDWebImage (5.11.0):
+    - SDWebImage/Core (= 5.11.0)
+  - SDWebImage/Core (5.11.0)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
@@ -7,20 +10,23 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - SDWebImage (~> 5.0)
   - SQLite.swift (~> 0.12.0)
   - URLImage
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - SDWebImage
     - SQLite.swift
     - URLImage
 
 SPEC CHECKSUMS:
   Alamofire: 2c792affbdc2f18016e08fdbcacd60aebe1ba593
+  SDWebImage: 7acbb57630ac7db4a495547fb73916ff3e432f6b
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   URLImage: 107320dff147321cceb201af24e8a154f24e6aed
 
-PODFILE CHECKSUM: 167410fec36499d1204a32cd43235f8f84135320
+PODFILE CHECKSUM: dbbc1b8df61fb10c2a7a06fb1f4ea19eccf365ba
 
 COCOAPODS: 1.6.0

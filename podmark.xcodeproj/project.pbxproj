@@ -53,6 +53,8 @@
 		C7C0FA102598F61A00492651 /* FoldersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0FA0F2598F61A00492651 /* FoldersPresenter.swift */; };
 		C7C0FA142598F67000492651 /* FoldersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0FA0F2598F61A00492651 /* FoldersPresenter.swift */; };
 		C7C0FA2C2598F7A700492651 /* SavedItemDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0FA2B2598F7A700492651 /* SavedItemDetailsScreen.swift */; };
+		C7C32F60261BF61F00382AFE /* SavedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C32F5F261BF61F00382AFE /* SavedListViewController.swift */; };
+		C7C32F6D261BFC5600382AFE /* SavedItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C32F6C261BFC5600382AFE /* SavedItemCellView.swift */; };
 		C7C8D7C6256012DC00314A33 /* SavedListsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C8D7C5256012DC00314A33 /* SavedListsPresenter.swift */; };
 		C7CEEDC3257177D300977978 /* ManualAddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CEEDC2257177D300977978 /* ManualAddItemView.swift */; };
 		C7CEEDC8257177EB00977978 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E5B515254DC93B00B5D31F /* ShareView.swift */; };
@@ -147,6 +149,8 @@
 		C7C0F9F82598F48E00492651 /* SavedItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemRow.swift; sourceTree = "<group>"; };
 		C7C0FA0F2598F61A00492651 /* FoldersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersPresenter.swift; sourceTree = "<group>"; };
 		C7C0FA2B2598F7A700492651 /* SavedItemDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemDetailsScreen.swift; sourceTree = "<group>"; };
+		C7C32F5F261BF61F00382AFE /* SavedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListViewController.swift; sourceTree = "<group>"; };
+		C7C32F6C261BFC5600382AFE /* SavedItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemCellView.swift; sourceTree = "<group>"; };
 		C7C8D7C5256012DC00314A33 /* SavedListsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListsPresenter.swift; sourceTree = "<group>"; };
 		C7CEEDC2257177D300977978 /* ManualAddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAddItemView.swift; sourceTree = "<group>"; };
 		C7CEEDD225717EEA00977978 /* ManualAddItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAddItemPresenter.swift; sourceTree = "<group>"; };
@@ -241,7 +245,9 @@
 				C75836D9247A16D300BD6C25 /* Info.plist */,
 				C7844C062619F6B70079F3BA /* Main.storyboard */,
 				C7844C0B2619F6E30079F3BA /* MainViewController.swift */,
+				C7C32F5F261BF61F00382AFE /* SavedListViewController.swift */,
 				C7844C10261A004F0079F3BA /* FolderCellView.swift */,
+				C7C32F6C261BFC5600382AFE /* SavedItemCellView.swift */,
 				C75836CB247A16CF00BD6C25 /* AppDelegate.swift */,
 				C75A3732254DD95D00C27F9F /* SavedListsDB.swift */,
 				C75836CD247A16CF00BD6C25 /* SceneDelegate.swift */,
@@ -479,6 +485,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-podmark/Pods-podmark-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/URLImage/URLImage.framework",
 			);
@@ -487,6 +494,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URLImage.framework",
 			);
@@ -556,6 +564,7 @@
 				C798FE7F2586636E000AB3F4 /* Intents.intentdefinition in Sources */,
 				C7E5B520254DCB7000B5D31F /* SavedListView.swift in Sources */,
 				C70BBE4A256ACF4B004AC950 /* SavedListItemView.swift in Sources */,
+				C7C32F6D261BFC5600382AFE /* SavedItemCellView.swift in Sources */,
 				C7CEEDCD257177EE00977978 /* ShareViewModel.swift in Sources */,
 				C7C0F9F92598F48E00492651 /* SavedItemRow.swift in Sources */,
 				C72FBD81256D7DB100C77EC0 /* ShareOptionsBuilder.swift in Sources */,
@@ -564,6 +573,7 @@
 				C7CEEDC8257177EB00977978 /* ShareView.swift in Sources */,
 				C72FBD8C256FFDA700C77EC0 /* DateExtensions.swift in Sources */,
 				C75836CC247A16CF00BD6C25 /* AppDelegate.swift in Sources */,
+				C7C32F60261BF61F00382AFE /* SavedListViewController.swift in Sources */,
 				C72FBD73256D775500C77EC0 /* ShareSheet.swift in Sources */,
 				C70BBE0A256ABD0E004AC950 /* SavedListItemPresenter.swift in Sources */,
 				C72FBD6C256D6DF000C77EC0 /* EditableTextField.swift in Sources */,
