@@ -1,6 +1,7 @@
 import UIKit
 import Combine
 import SDWebImage
+import SwiftUI
 
 class SavedListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var tableView: UITableView = UITableView()
@@ -8,6 +9,7 @@ class SavedListViewController: UIViewController, UITableViewDataSource, UITableV
     var folderName: String?
     var items = [SavedItem]()
     private var cancellables: Set<AnyCancellable> = []
+    private var shareOptionsBuilder = ShareOptionsBuilder()
 
     override func loadView() {
         super.loadView()
@@ -30,12 +32,55 @@ class SavedListViewController: UIViewController, UITableViewDataSource, UITableV
             self?.items = items
             self?.tableView.reloadData()
         }.store(in: &cancellables)
+        
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(shareTapped)),
+            UIBarButtonItem(image: UIImage(systemName: "line.horizontal.3.decrease.circle"), style: .plain, target: self, action: #selector(sortTapped)),
+            UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped)),
+        ]
+        
+        self.title = folderName!
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if let folderName = folderName {
-            presenter.loadFolder(folderName: folderName)
+        presenter.loadFolder(folderName: folderName!)
+    }
+    
+    @objc func shareTapped() {
+        let shareActionSheet = UIAlertController(title: "Share as...", message: nil, preferredStyle: .actionSheet)
+        let actions = shareOptionsBuilder.getAlertControllerButtons(action: { shareType in
+            let shareSheet = UIActivityViewController(activityItems: [self.shareOptionsBuilder.getShareData(type: shareType, items: self.presenter.items)], applicationActivities: nil)
+            self.present(shareSheet, animated: true)
+        })
+        actions.forEach { action in
+            shareActionSheet.addAction(action)
         }
+
+        self.present(shareActionSheet, animated: true)
+    }
+    
+    @objc func sortTapped() {
+        let alert = UIAlertController(title: "Sort by...", message: nil, preferredStyle: .actionSheet)
+        let actions = presenter.getSortButtons(action: { type in
+            self.presenter.sort = type
+        })
+        actions.forEach { action in
+            alert.addAction(action)
+        }
+
+        self.present(alert, animated: true)
+    }
+    
+    @objc func addTapped() {
+        let addItemView = ManualAddItemView(
+            presenter: ManualAddItemPresenter(folder: folderName!),
+            dismissAction: {
+                self.presenter.loadFolder(folderName: self.folderName!)
+                self.dismiss(animated: true, completion: nil)
+            }
+        )
+        let vc = UIHostingController(rootView: addItemView)
+        self.present(vc, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,10 +93,17 @@ class SavedListViewController: UIViewController, UITableViewDataSource, UITableV
         let item = items[indexPath.row]
         cell.title.text = item.title
         cell.podcastName.text = item.podcastName
-        cell.artwork.isHidden = item.imageURL.isEmpty
-        cell.artwork.sd_setImage(with: URL(string: item.imageURL))
+        
+        let placeHolderImage = UIImage(systemName: "questionmark.square")?.withTintColor(UIColor(named: "tint") ?? .gray, renderingMode: .alwaysOriginal)
+        
+        cell.artwork.sd_setImage(with: URL(string: item.imageURL), placeholderImage: placeHolderImage)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let savedItemVC = UIHostingController(rootView: SavedItemDetailsScreen(item: items[indexPath.row]))
+        navigationController!.pushViewController(savedItemVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

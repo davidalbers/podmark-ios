@@ -59,11 +59,13 @@ struct SavedListView: View {
                         .frame(width: 24, height: 24)
                 }).sheet(isPresented: $showShareSheet) {
                     ShareSheet(activityItems: [shareOptionsBuilder.getShareData(type: shareType, items: presenter.items)])
-                }.actionSheet(isPresented: $showSortSheet) {
-                    ActionSheet(title: Text("Sort by..."), buttons: presenter.getSortButtons { type in
-                        presenter.sort = type
-                    })
                 }
+//                .actionSheet(isPresented: $showSortSheet) {
+                    
+//                    ActionSheet(title: Text("Sort by..."), buttons: presenter.getSortButtons { type in
+//                        presenter.sort = type
+//                    })
+//                }
                 Spacer(minLength: 24)
                 Button(action: {
                     self.showShareTypesSheet = true

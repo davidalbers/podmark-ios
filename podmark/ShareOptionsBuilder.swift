@@ -20,6 +20,18 @@ struct ShareOptionsBuilder {
         return buttons
     }
     
+    func getAlertControllerButtons(action: @escaping (ShareType) -> Void) -> [UIAlertAction] {
+        var buttons = [UIAlertAction]()
+        ShareOptionsBuilder.ShareType.allCases.forEach { type in
+            buttons.append(UIAlertAction(title: type.rawValue, style: .default , handler:{ (UIAlertAction) in
+                action(type)
+            }))
+        }
+
+        buttons.append(UIAlertAction(title: "Cancel", style: .cancel))
+        return buttons
+    }
+    
     func getShareData(type: ShareType, items: [SavedItem]) -> Any {
         switch type {
         case ShareType.text:

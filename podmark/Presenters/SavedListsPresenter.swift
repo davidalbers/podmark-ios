@@ -53,14 +53,14 @@ class SavedListsPresenter: ObservableObject {
         items.removeAll(where: { $0.id == id })
     }
     
-    func getSortButtons(action: @escaping (Sort) -> Void) -> [ActionSheet.Button] {
-        var buttons = [ActionSheet.Button]()
+    func getSortButtons(action: @escaping (Sort) -> Void) -> [UIAlertAction] {
+        var buttons = [UIAlertAction]()
         Sort.allCases.forEach { type in
-            buttons.append(.default(Text(type.rawValue)) {
+            buttons.append(UIAlertAction(title: type.rawValue, style: .default , handler:{ (UIAlertAction) in
                 action(type)
-            })
+            }))
         }
-        buttons.append(.cancel())
+        buttons.append(UIAlertAction(title: "Cancel", style: .cancel))
         return buttons
     }
 }
