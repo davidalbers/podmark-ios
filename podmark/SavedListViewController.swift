@@ -22,10 +22,10 @@ class SavedListViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.dataSource = self
         tableView.delegate = self
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        tableView.rowHeight = UITableView.automaticDimension
         tableView.register(SavedItemCellView.self, forCellReuseIdentifier: "SavedItem")
 
         presenter.$items.sink { [weak self] items in
@@ -105,13 +105,11 @@ class SavedListViewController: UIViewController, UITableViewDataSource, UITableV
         let savedItemVC = UIHostingController(rootView: SavedItemDetailsScreen(item: items[indexPath.row]))
         navigationController!.pushViewController(savedItemVC, animated: true)
     }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let item = items.remove(at: indexPath.row)
+            presenter.deleteSavedItem(id: item.id)
+        }
     }
-
 }
