@@ -49,6 +49,7 @@ class MainViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let savedListVC = SavedListViewController()
         savedListVC.folderName = folders[indexPath.row]
+
         navigationController!.pushViewController(savedListVC, animated: true)
     }
     

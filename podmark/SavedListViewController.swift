@@ -10,6 +10,7 @@ class SavedListViewController: UIViewController, UITableViewDataSource, UITableV
     var items = [SavedItem]()
     private var cancellables: Set<AnyCancellable> = []
     private var shareOptionsBuilder = ShareOptionsBuilder()
+    private var observer: NSObjectProtocol?
 
     override func loadView() {
         super.loadView()
@@ -32,6 +33,8 @@ class SavedListViewController: UIViewController, UITableViewDataSource, UITableV
             self?.items = items
             self?.tableView.reloadData()
         }.store(in: &cancellables)
+        presenter.loadFolder(folderName: folderName!)
+
         
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(shareTapped)),
@@ -40,10 +43,16 @@ class SavedListViewController: UIViewController, UITableViewDataSource, UITableV
         ]
         
         self.title = folderName!
+        
+        observer = NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: .main) { [unowned self] notification in
+            presenter.loadFolder(folderName: folderName!)
+        }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        presenter.loadFolder(folderName: folderName!)
+    deinit {
+        if let observer = observer {
+            NotificationCenter.default.removeObserver(observer)
+        }
     }
     
     @objc func shareTapped() {
@@ -94,16 +103,17 @@ class SavedListViewController: UIViewController, UITableViewDataSource, UITableV
         cell.title.text = item.title
         cell.podcastName.text = item.podcastName
         
-        let placeHolderImage = UIImage(systemName: "questionmark.square")?.withTintColor(UIColor(named: "tint") ?? .gray, renderingMode: .alwaysOriginal)
+        
+        let placeHolderImage = UIImage(named: "notFound")?.withTintColor(UIColor(named: "tint") ?? .gray, renderingMode: .alwaysOriginal)
         
         cell.artwork.sd_setImage(with: URL(string: item.imageURL), placeholderImage: placeHolderImage)
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let savedItemVC = UIHostingController(rootView: SavedItemDetailsScreen(item: items[indexPath.row]))
         navigationController!.pushViewController(savedItemVC, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

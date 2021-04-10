@@ -31,6 +31,12 @@ class SavedItemCellView: UITableViewCell {
             podcastName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 16),
             contentView.bottomAnchor.constraint(equalTo: podcastName.bottomAnchor, constant: 16),
         ])
+        
+        artwork.layer.borderWidth = 1.0
+        artwork.layer.masksToBounds = false
+        artwork.layer.borderColor = UIColor(named: "border")?.cgColor
+        artwork.layer.cornerRadius = 8
+        artwork.clipsToBounds = true
     }
     
     required init?(coder: NSCoder) {
