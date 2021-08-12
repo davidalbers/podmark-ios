@@ -58,7 +58,7 @@ class ShareViewModel: ObservableObject {
     private func getItunesData(id: String) {
         AF.request("https://itunes.apple.com/lookup?id=\(id)").responseDecodable(of: ITunesResponse.self) { response in
             let iTunesResponse = (try? response.result.get())
-            self.podcastName = iTunesResponse?.results.first?.collectionName.decodingHTMLEntities() ?? "ERROR"
+            self.podcastName = iTunesResponse?.results.first?.collectionName.decodingHTMLEntities() ?? ""
             self.title = self.cleanUpTitle(self.title, podcastName: self.podcastName)
             self.imageURL = iTunesResponse?.results.first?.artworkUrl600 ?? ""
             let loadedItem = SavedItem(
