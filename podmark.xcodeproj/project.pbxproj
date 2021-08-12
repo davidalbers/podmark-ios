@@ -34,6 +34,9 @@
 		C75A3738254E10E900C27F9F /* SavedListsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75A3732254DD95D00C27F9F /* SavedListsDB.swift */; };
 		C75A373E254E1BB700C27F9F /* ShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75A373D254E1BB700C27F9F /* ShareViewModel.swift */; };
 		C798FE7F2586636E000AB3F4 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C798FE7E2586636E000AB3F4 /* Intents.intentdefinition */; };
+		C79D0FE126C4A72D0034AB95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D0FE026C4A72C0034AB95 /* Constants.swift */; };
+		C79D0FE226C4A7850034AB95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D0FE026C4A72C0034AB95 /* Constants.swift */; };
+		C79D0FE326C4A7850034AB95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D0FE026C4A72C0034AB95 /* Constants.swift */; };
 		C79FFB39258FA508009F6E49 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FFB38258FA508009F6E49 /* ViewExtensions.swift */; };
 		C79FFB3F258FA91E009F6E49 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FFB38258FA508009F6E49 /* ViewExtensions.swift */; };
 		C79FFB45258FA91F009F6E49 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FFB38258FA508009F6E49 /* ViewExtensions.swift */; };
@@ -132,6 +135,7 @@
 		C75A373D254E1BB700C27F9F /* ShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewModel.swift; sourceTree = "<group>"; };
 		C76DC39B259798F600374C9A /* add.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = add.entitlements; sourceTree = "<group>"; };
 		C798FE7E2586636E000AB3F4 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		C79D0FE026C4A72C0034AB95 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C79FFB38258FA508009F6E49 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		C7A336BE25866B2700F8CE4E /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		C7A336C025866B3200F8CE4E /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
@@ -256,6 +260,7 @@
 				C7583724247ABE5F00BD6C25 /* CustomShareNavigationController.swift */,
 				C7E5B515254DC93B00B5D31F /* ShareView.swift */,
 				C75A373D254E1BB700C27F9F /* ShareViewModel.swift */,
+				C79D0FE026C4A72C0034AB95 /* Constants.swift */,
 			);
 			path = ShareExtension;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 				C707A61725939643000FEFC3 /* SwipeToDeleteRow.swift in Sources */,
 				C79FFB39258FA508009F6E49 /* ViewExtensions.swift in Sources */,
 				C75836CE247A16CF00BD6C25 /* SceneDelegate.swift in Sources */,
+				C79D0FE126C4A72D0034AB95 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +585,7 @@
 				C72FBD82256D7DB100C77EC0 /* ShareOptionsBuilder.swift in Sources */,
 				C70BBE4B256ACF4B004AC950 /* SavedListItemView.swift in Sources */,
 				C72FBD8D256FFDA700C77EC0 /* DateExtensions.swift in Sources */,
+				C79D0FE226C4A7850034AB95 /* Constants.swift in Sources */,
 				C7F89E23256047FB0007FFD2 /* StringExtensions.swift in Sources */,
 				C7C0F9FD2598F49E00492651 /* SavedItemRow.swift in Sources */,
 				C72FBD6D256D6DF000C77EC0 /* EditableTextField.swift in Sources */,
@@ -602,6 +609,7 @@
 				C7E04B7B258683160094743E /* ShareOptionsBuilder.swift in Sources */,
 				C7E04B4C25867E050094743E /* ShareViewModel.swift in Sources */,
 				C7A3373625867A3C00F8CE4E /* SavedListsDB.swift in Sources */,
+				C79D0FE326C4A7850034AB95 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
