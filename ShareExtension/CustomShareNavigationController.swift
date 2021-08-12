@@ -31,20 +31,19 @@ class CustomShareNavigationController: UIViewController {
 
     override func beginRequest(with context: NSExtensionContext) {
         self.context = context
-        if let item = context.inputItems.first as? NSExtensionItem,
-           let attachments = item.attachments,
-           let itemProvider = attachments.first {
-            if itemProvider.hasItemConformingToTypeIdentifier("public.url") {
-                itemProvider.loadItem(forTypeIdentifier: "public.url", options: nil) { [self] (url, error) in
+        (context.inputItems.first as? NSExtensionItem)?.attachments?.forEach { itemProvider in
+            if itemProvider.hasItemConformingToTypeIdentifier(Constants.urlTypeId) {
+                itemProvider.loadItem(forTypeIdentifier: Constants.urlTypeId, options: nil) { [self] (url, error) in
                     if let url = (url as? URL) {
                         shareView?.shareViewModel.setURL(url.absoluteString)
                     }
                 }
             }
-            if itemProvider.hasItemConformingToTypeIdentifier("public.plain-text") {
-                itemProvider.loadItem(forTypeIdentifier: "public.plain-text", options: nil) { [self] (sharedText, error) in
-                    if let sharedText = (sharedText as? String) {
-                        shareView?.shareViewModel.setURL(sharedText)
+            else if itemProvider.hasItemConformingToTypeIdentifier(Constants.textTypeId) {
+                itemProvider.loadItem(forTypeIdentifier: Constants.textTypeId, options: nil) { [self] (sharedText, error) in
+                    if let sharedText = (sharedText as? String),
+                       let sharedTextURL = URL(string: sharedText) {
+                        shareView?.shareViewModel.setURL(sharedTextURL.absoluteString)
                     }
                 }
             }
