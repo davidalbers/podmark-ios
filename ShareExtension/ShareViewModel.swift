@@ -26,8 +26,7 @@ class ShareViewModel: ObservableObject {
         sharedURL = urlString
         self.folder = folder
         self.notes = notes
-        let k = urlString.findFirstGroupInRegex(regexString: #"(\d+:\d+)$"#)
-        timeStamp = k
+        timeStamp = getTimeStamp(urlString: urlString)
         AF.request(urlString).responseString { responseString in
             let urlHTML = (try? responseString.result.get()) ?? ""
             let id = self.parseDataFromHTML(urlHTML)
@@ -37,6 +36,35 @@ class ShareViewModel: ObservableObject {
     
     func cancel() {
         savedListsPresenter.deleteSavedItem(id: sharedURL)
+    }
+
+    private func getTimeStamp(urlString: String) -> String {
+        let colonBased = getColonTimeStamp(urlString: urlString)
+        if !colonBased.isEmpty {
+            return colonBased
+        } else {
+            return getSecondsTimeStamp(urlString: urlString)
+        }
+    }
+
+    // e.g. t=3600
+    private func getSecondsTimeStamp(urlString: String) -> String {
+        let totalSeconds = Int(urlString.findFirstGroupInRegex(regexString: #"t=(\d+)"#)) ?? 0
+        let seconds = totalSeconds % 3600 % 60
+        let minutes = totalSeconds % 3600 / 60
+        let hours = totalSeconds / 3600
+        if minutes == 0 && hours == 0 && seconds == 0 {
+            return ""
+        } else if hours == 0 {
+            return String(format: "%02d:%02d", minutes, seconds)
+        } else {
+            return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+        }
+    }
+
+    // e.g. 12:34
+    private func getColonTimeStamp(urlString: String) -> String {
+        return urlString.findFirstGroupInRegex(regexString: #"(\d+:\d+)$"#)
     }
     
     private func parseDataFromHTML(_ urlHTML: String) -> String {
