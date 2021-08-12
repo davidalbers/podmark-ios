@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C75836C7247A16CF00BD6C25"
-               BuildableName = "podmark.app"
-               BlueprintName = "podmark"
+               BuildableName = "Podmark.app"
+               BlueprintName = "Podmark"
                ReferencedContainer = "container:podmark.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -65,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C75836C7247A16CF00BD6C25"
-            BuildableName = "podmark.app"
-            BlueprintName = "podmark"
+            BuildableName = "Podmark.app"
+            BlueprintName = "Podmark"
             ReferencedContainer = "container:podmark.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -82,8 +82,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C75836C7247A16CF00BD6C25"
-            BuildableName = "podmark.app"
-            BlueprintName = "podmark"
+            BuildableName = "Podmark.app"
+            BlueprintName = "Podmark"
             ReferencedContainer = "container:podmark.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
