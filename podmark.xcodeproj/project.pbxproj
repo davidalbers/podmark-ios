@@ -120,7 +120,7 @@
 		C72FBD72256D775500C77EC0 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		C72FBD80256D7DB100C77EC0 /* ShareOptionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareOptionsBuilder.swift; sourceTree = "<group>"; };
 		C72FBD8B256FFDA600C77EC0 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
-		C75836C8247A16CF00BD6C25 /* podmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = podmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C75836C8247A16CF00BD6C25 /* Podmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75836CB247A16CF00BD6C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C75836CD247A16CF00BD6C25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C75836D4247A16D300BD6C25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 		C75836C9247A16CF00BD6C25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C75836C8247A16CF00BD6C25 /* podmark.app */,
+				C75836C8247A16CF00BD6C25 /* Podmark.app */,
 				C7583712247AAEBB00BD6C25 /* podmarkshare.appex */,
 				C7A336F6258677D200F8CE4E /* add.appex */,
 			);
@@ -318,9 +318,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C75836C7247A16CF00BD6C25 /* podmark */ = {
+		C75836C7247A16CF00BD6C25 /* Podmark */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C75836F2247A16D300BD6C25 /* Build configuration list for PBXNativeTarget "podmark" */;
+			buildConfigurationList = C75836F2247A16D300BD6C25 /* Build configuration list for PBXNativeTarget "Podmark" */;
 			buildPhases = (
 				A32F4CB9E49A39922AA2117D /* [CP] Check Pods Manifest.lock */,
 				C75836C4247A16CF00BD6C25 /* Sources */,
@@ -335,9 +335,9 @@
 				C758371B247AAEBB00BD6C25 /* PBXTargetDependency */,
 				C7A3370C258677D200F8CE4E /* PBXTargetDependency */,
 			);
-			name = podmark;
+			name = Podmark;
 			productName = podmark;
-			productReference = C75836C8247A16CF00BD6C25 /* podmark.app */;
+			productReference = C75836C8247A16CF00BD6C25 /* Podmark.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C7583711247AAEBB00BD6C25 /* podmarkshare */ = {
@@ -411,7 +411,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C75836C7247A16CF00BD6C25 /* podmark */,
+				C75836C7247A16CF00BD6C25 /* Podmark */,
 				C7583711247AAEBB00BD6C25 /* podmarkshare */,
 				C7A336F5258677D200F8CE4E /* add */,
 			);
@@ -764,14 +764,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = podmark/podmark.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BHWFYJS3J6;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = R37L87S852;
 				INFOPLIST_FILE = podmark/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dalbers.podmark;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidalbers.podmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -786,14 +788,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = podmark/podmark.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BHWFYJS3J6;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = R37L87S852;
 				INFOPLIST_FILE = podmark/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dalbers.podmark;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidalbers.podmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -807,7 +811,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ShareExtension/podmarkshare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BHWFYJS3J6;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = R37L87S852;
 				INFOPLIST_FILE = ShareExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -815,7 +820,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dalbers.podmark.podmarkshare;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidalbers.podmark.shareextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -831,7 +837,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ShareExtension/podmarkshare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BHWFYJS3J6;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = R37L87S852;
 				INFOPLIST_FILE = ShareExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -839,7 +846,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dalbers.podmark.podmarkshare;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidalbers.podmark.shareextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -853,7 +861,8 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Shortcuts/add.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BHWFYJS3J6;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = R37L87S852;
 				INFOPLIST_FILE = Shortcuts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -861,7 +870,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dalbers.podmark.add;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidalbers.podmark.shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -875,7 +885,8 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Shortcuts/add.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BHWFYJS3J6;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = R37L87S852;
 				INFOPLIST_FILE = Shortcuts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -883,7 +894,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dalbers.podmark.add;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidalbers.podmark.shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -903,7 +915,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C75836F2247A16D300BD6C25 /* Build configuration list for PBXNativeTarget "podmark" */ = {
+		C75836F2247A16D300BD6C25 /* Build configuration list for PBXNativeTarget "Podmark" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C75836F3247A16D300BD6C25 /* Debug */,
