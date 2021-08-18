@@ -30,7 +30,11 @@ class ShareViewModel: ObservableObject {
         AF.request(urlString).responseString { responseString in
             let urlHTML = (try? responseString.result.get()) ?? ""
             let id = self.parseDataFromHTML(urlHTML)
-            self.getItunesData(id: id)
+            if id.isEmpty {
+                self.getLinkedData(html: urlHTML)
+            } else {
+                self.getItunesData(id: id)
+            }
         }
     }
     
@@ -82,6 +86,34 @@ class ShareViewModel: ObservableObject {
             .trimmingCharactersRecursive(#"-—⁠–:|"#)
     }
 
+    private func getLinkedData(html: String) {
+        // <script type="application/ld+json">
+        let linkedData = html.findFirstGroupInRegex(regexString: #"<script type="application/ld\+json">(([^<]|\n)*)</script>"#)
+        print(linkedData)
+        let decoder = JSONDecoder()
+        if let linkedDataData = linkedData.data(using: .utf8){
+            let decoded: LinkedData? = try? decoder.decode(LinkedData.self, from: linkedDataData)
+            let name = decoded?.name
+
+            self.podcastName = name ?? ""
+            self.title = decoded?.partOfSeries.name ?? ""
+            self.imageURL = decoded?.image ?? ""
+            let loadedItem = SavedItem(
+                id: UUID().uuidString,
+                sharedURL: self.sharedURL,
+                imageURL: self.imageURL,
+                title: self.title,
+                podcastName: self.podcastName,
+                notes: self.notes,
+                timeStamp: self.timeStamp,
+                directDownloadURL: self.directDownloadLink,
+                folder: self.folder,
+                dateAdded: Date().iso8601withFractionalSeconds
+            )
+            self.savedListsPresenter.insertSavedItem(savedItem: loadedItem)
+            self.loadedItem = loadedItem
+        }
+    }
     
     private func getItunesData(id: String) {
         AF.request("https://itunes.apple.com/lookup?id=\(id)").responseDecodable(of: ITunesResponse.self) { response in
@@ -105,4 +137,14 @@ class ShareViewModel: ObservableObject {
             self.loadedItem = loadedItem
         }
     }
+}
+
+struct LinkedData: Codable {
+    let name: String
+    let image: String
+    let partOfSeries: LinkedDataSeries
+}
+
+struct LinkedDataSeries: Codable {
+    let name: String
 }
