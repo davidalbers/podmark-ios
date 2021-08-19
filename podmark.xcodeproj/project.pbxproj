@@ -65,6 +65,9 @@
 		C7E04B7B258683160094743E /* ShareOptionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FBD80256D7DB100C77EC0 /* ShareOptionsBuilder.swift */; };
 		C7E5B516254DC93B00B5D31F /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E5B515254DC93B00B5D31F /* ShareView.swift */; };
 		C7E5B520254DCB7000B5D31F /* SavedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E5B51F254DCB7000B5D31F /* SavedListView.swift */; };
+		C7EBB9C626CDE0E3000792BC /* LinkedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EBB9C526CDE0E3000792BC /* LinkedData.swift */; };
+		C7EBB9C726CDE0E3000792BC /* LinkedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EBB9C526CDE0E3000792BC /* LinkedData.swift */; };
+		C7EBB9C826CDE0E3000792BC /* LinkedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EBB9C526CDE0E3000792BC /* LinkedData.swift */; };
 		C7EE384725616F36009831AD /* TextAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE384625616F36009831AD /* TextAlert.swift */; };
 		C7F89E1E256047D00007FFD2 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F89E1D256047D00007FFD2 /* StringExtensions.swift */; };
 		C7F89E23256047FB0007FFD2 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F89E1D256047D00007FFD2 /* StringExtensions.swift */; };
@@ -152,6 +155,7 @@
 		C7CEEDD225717EEA00977978 /* ManualAddItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAddItemPresenter.swift; sourceTree = "<group>"; };
 		C7E5B515254DC93B00B5D31F /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 		C7E5B51F254DCB7000B5D31F /* SavedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListView.swift; sourceTree = "<group>"; };
+		C7EBB9C526CDE0E3000792BC /* LinkedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedData.swift; sourceTree = "<group>"; };
 		C7EE384625616F36009831AD /* TextAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlert.swift; sourceTree = "<group>"; };
 		C7F89E1D256047D00007FFD2 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -261,6 +265,7 @@
 				C7E5B515254DC93B00B5D31F /* ShareView.swift */,
 				C75A373D254E1BB700C27F9F /* ShareViewModel.swift */,
 				C79D0FE026C4A72C0034AB95 /* Constants.swift */,
+				C7EBB9C526CDE0E3000792BC /* LinkedData.swift */,
 			);
 			path = ShareExtension;
 			sourceTree = "<group>";
@@ -560,6 +565,7 @@
 				C7C8D7C6256012DC00314A33 /* SavedListsPresenter.swift in Sources */,
 				C7EE384725616F36009831AD /* TextAlert.swift in Sources */,
 				C7CEEDC8257177EB00977978 /* ShareView.swift in Sources */,
+				C7EBB9C626CDE0E3000792BC /* LinkedData.swift in Sources */,
 				C72FBD8C256FFDA700C77EC0 /* DateExtensions.swift in Sources */,
 				C75836CC247A16CF00BD6C25 /* AppDelegate.swift in Sources */,
 				C72FBD73256D775500C77EC0 /* ShareSheet.swift in Sources */,
@@ -593,6 +599,7 @@
 				C72FBD74256D775500C77EC0 /* ShareSheet.swift in Sources */,
 				C79FFB45258FA91F009F6E49 /* ViewExtensions.swift in Sources */,
 				C7583725247ABE5F00BD6C25 /* CustomShareNavigationController.swift in Sources */,
+				C7EBB9C726CDE0E3000792BC /* LinkedData.swift in Sources */,
 				C7C0F9E62598F3D000492651 /* RoundedURLImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,6 +610,7 @@
 			files = (
 				C7E04B5325867F1D0094743E /* StringExtensions.swift in Sources */,
 				C7A3371A2586781200F8CE4E /* Intents.intentdefinition in Sources */,
+				C7EBB9C826CDE0E3000792BC /* LinkedData.swift in Sources */,
 				C79FFB3F258FA91E009F6E49 /* ViewExtensions.swift in Sources */,
 				C7E04B4525867D040094743E /* DateExtensions.swift in Sources */,
 				C7A336F9258677D200F8CE4E /* IntentHandler.swift in Sources */,

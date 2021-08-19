@@ -31,7 +31,7 @@ class ShareViewModel: ObservableObject {
             let urlHTML = (try? responseString.result.get()) ?? ""
             let id = self.parseDataFromHTML(urlHTML)
             if id.isEmpty {
-                self.getLinkedData(html: urlHTML)
+                self.getLinkedData(fromHtml: urlHTML)
             } else {
                 self.getItunesData(id: id)
             }
@@ -86,10 +86,8 @@ class ShareViewModel: ObservableObject {
             .trimmingCharactersRecursive(#"-—⁠–:|"#)
     }
 
-    private func getLinkedData(html: String) {
-        // <script type="application/ld+json">
+    private func getLinkedData(fromHtml html: String) {
         let linkedData = html.findFirstGroupInRegex(regexString: #"<script type="application/ld\+json">(([^<]|\n)*)</script>"#)
-        print(linkedData)
         let decoder = JSONDecoder()
         if let linkedDataData = linkedData.data(using: .utf8){
             let decoded: LinkedData? = try? decoder.decode(LinkedData.self, from: linkedDataData)
@@ -98,53 +96,34 @@ class ShareViewModel: ObservableObject {
             self.podcastName = name ?? ""
             self.title = decoded?.partOfSeries.name ?? ""
             self.imageURL = decoded?.image ?? ""
-            let loadedItem = SavedItem(
-                id: UUID().uuidString,
-                sharedURL: self.sharedURL,
-                imageURL: self.imageURL,
-                title: self.title,
-                podcastName: self.podcastName,
-                notes: self.notes,
-                timeStamp: self.timeStamp,
-                directDownloadURL: self.directDownloadLink,
-                folder: self.folder,
-                dateAdded: Date().iso8601withFractionalSeconds
-            )
-            self.savedListsPresenter.insertSavedItem(savedItem: loadedItem)
-            self.loadedItem = loadedItem
+            showItem()
         }
     }
-    
+
     private func getItunesData(id: String) {
         AF.request("https://itunes.apple.com/lookup?id=\(id)").responseDecodable(of: ITunesResponse.self) { response in
             let iTunesResponse = (try? response.result.get())
             self.podcastName = iTunesResponse?.results.first?.collectionName.decodingHTMLEntities() ?? ""
             self.title = self.cleanUpTitle(self.title, podcastName: self.podcastName)
             self.imageURL = iTunesResponse?.results.first?.artworkUrl600 ?? ""
-            let loadedItem = SavedItem(
-                id: UUID().uuidString,
-                sharedURL: self.sharedURL,
-                imageURL: self.imageURL,
-                title: self.title,
-                podcastName: self.podcastName,
-                notes: self.notes,
-                timeStamp: self.timeStamp,
-                directDownloadURL: self.directDownloadLink,
-                folder: self.folder,
-                dateAdded: Date().iso8601withFractionalSeconds
-            )
-            self.savedListsPresenter.insertSavedItem(savedItem: loadedItem)
-            self.loadedItem = loadedItem
+            self.showItem()
         }
     }
-}
 
-struct LinkedData: Codable {
-    let name: String
-    let image: String
-    let partOfSeries: LinkedDataSeries
-}
-
-struct LinkedDataSeries: Codable {
-    let name: String
+    private func showItem() {
+        let loadedItem = SavedItem(
+            id: UUID().uuidString,
+            sharedURL: self.sharedURL,
+            imageURL: self.imageURL,
+            title: self.title,
+            podcastName: self.podcastName,
+            notes: self.notes,
+            timeStamp: self.timeStamp,
+            directDownloadURL: self.directDownloadLink,
+            folder: self.folder,
+            dateAdded: Date().iso8601withFractionalSeconds
+        )
+        self.savedListsPresenter.insertSavedItem(savedItem: loadedItem)
+        self.loadedItem = loadedItem
+    }
 }
